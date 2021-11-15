@@ -13,8 +13,11 @@
         <div id="container-app">
             <div id="contact">
                 <div class="user">
-                    <div class="picprofile">
-                        <img src="img/avatar_1.jpg" alt=""> 
+                    <div class="detail">
+                        <div class="picprofile">
+                            <img src="img/avatar_1.jpg" alt=""> 
+                        </div>
+                        <h2>Nome utente</h2>
                     </div>
                     <div class="icons">
                         <i class="fas fa-sync-alt"></i>
@@ -27,27 +30,62 @@
                     <div id="bell">
                         <i class="far fa-bell-slash"></i>
                     </div>
-                    <div id="alert-notifiche">
-                        <h2>Ricevi notifiche di nuovi messaggi</h3>
-                        <h3>Attiva notifiche desktop</h4>
+                    <div class="alert-notifiche">
+                        <h2>Ricevi notifiche di nuovi messaggi</h2>
+                        <h3>Attiva notifiche desktop</h3>
                     </div>
                 </div>
 
                 <div id="search">
                     <input id="input-search" type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
+
+                <div class="user-chat">
+                    <div class="picprofile">
+                        <img src="img/avatar_1.jpg" alt=""> 
+                    </div>
+                    <div class="alert-notifiche">
+                        <h2>Michele</h2>
+                        <h4>Tutto fatto!...</h4>
+                    </div>
+                </div>
             </div>
+
             <div id="chat">
                 <div class="user">
-                    <div class="picprofile">
-                        <img src="img/avatar_1.jpg" alt="">
-                        
+                    <div class="detail">
+                        <div class="picprofile">
+                            <img src="img/avatar_1.jpg" alt=""> 
+                        </div>
+                        <div class="alert-notifiche">
+                            <h2>Michele</h2>
+                            <h4>Ultimo accesso oggi alle 10/01/2021 15:57</h4>
+                        </div>
                     </div>
                     <div class="icons">
-                        <i class="fas fa-sync-alt"></i>
-                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
                         <i class="fas fa-user-circle"></i>
                     </div>
+                </div>
+
+                <div id="messages">
+                    <div class="containOwnMessages">
+                        <div class="ownMessage">
+                            <p><strong>Hai portato a spasso il cane?</strong></p>
+                        </div>
+                    </div>
+                    <div class="containFriendMessages">
+                        <div class="FriendMessage">
+                            <p><strong>Tutto fatto!</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="write">
+                    <i class="far fa-smile"></i>
+                    <input type="text" placeholder="Scrivi un messaggio...">
+                    <i class="fas fa-microphone"></i>
                 </div>
             </div>
         </div>

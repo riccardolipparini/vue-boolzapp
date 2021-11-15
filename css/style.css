@@ -26,10 +26,15 @@
 #contact{
     height: 100%;
     width: 35%;
+    background-color: white;
 }
 #chat{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
     height: 100%;
     width: 65%;
+    background-image: url("https://www-acc.esa.int/extension/pillars/design/pillars/images/nebula.jpg");
 }
 /* user */
 
@@ -42,13 +47,17 @@
     height: 60px;
     border: grey solid 1px;
 }
-
+.detail{
+    display: flex;
+    align-items: center;
+}
+.detail h2 h4{
+    margin-left: 10px;
+}
 .picprofile{
     border-radius: 50%;
     height: 45px;
     width: 45px;
-    /* debug */
-    background-color: hotpink;
 }
 .picprofile img{
     object-fit: cover;
@@ -84,13 +93,13 @@
     color:rgba(141,218,252,255);
     font-size: 40px;
 }
-#alert-notifiche{
+.alert-notifiche{
     margin-left: 10px;
 }
-#alert-notifiche h2{
+.alert-notifiche h2{
     font-size: 20px;
 }
-#alert-notifiche h3{
+.alert-notifiche h3{
     font-size: 15px;
     color: grey;
     text-decoration: underline;
@@ -107,4 +116,67 @@
 #input-search{
     width: 95%;
     height:30px;
+}
+
+.user-chat{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    height: 60px;
+    border-bottom: grey solid .5px;
+}
+.alert-notifiche h4{
+    font-size: 15px;
+    color: grey;
+}
+
+/* chat */
+
+#write{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background-color:rgba(242,237,232,255);
+}
+#write input{
+    width: 60%;
+    height: 40px;
+}
+#write i{
+    font-size: 40px;
+    color: grey;
+}
+#messages{
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+}
+.containOwnMessages{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
+}
+.ownMessage{
+    margin-right: 40px;
+    background-color:rgba(213,249,186,255);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.containFriendMessages{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
+}
+.FriendMessage{
+    margin-left: 40px;
+    background-color:white;
+    padding: 20px;
+    border-radius: 10px;
 }
