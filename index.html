@@ -10,12 +10,12 @@
 </head>
 <body>
     <div id="container-green">
-        <div id="container-app">
+        <div id="containerApp">
             <div id="contact">
                 <div class="user">
                     <div class="detail">
                         <div class="picprofile">
-                            <img src="img/avatar_1.jpg" alt=""> 
+                            <img src="img/avatar_io.jpg" alt=""> 
                         </div>
                         <h2>Nome utente</h2>
                     </div>
@@ -40,43 +40,13 @@
                     <input id="input-search" type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
 
-                <div class="user-chat">
+                <div v-for="friend, i in friends" class="user-chat">
                     <div class="picprofile">
-                        <img src="img/avatar_1.jpg" alt=""> 
+                        <img src="friend.image" alt=""> 
                     </div>
                     <div class="alert-notifiche">
-                        <h2>Michele</h2>
-                        <h4>Tutto fatto!...</h4>
-                    </div>
-                </div>
-
-                <div class="user-chat">
-                    <div class="picprofile">
-                        <img src="img/avatar_2.jpg" alt=""> 
-                    </div>
-                    <div class="alert-notifiche">
-                        <h2>Paolo</h2>
-                        <h4>Vorrei ma...</h4>
-                    </div>
-                </div>
-
-                <div class="user-chat">
-                    <div class="picprofile">
-                        <img src="img/avatar_3.jpg" alt=""> 
-                    </div>
-                    <div class="alert-notifiche">
-                        <h2>Francesca</h2>
-                        <h4>Va bene aspetta...</h4>
-                    </div>
-                </div>
-
-                <div class="user-chat">
-                    <div class="picprofile">
-                        <img src="img/avatar_4.jpg" alt=""> 
-                    </div>
-                    <div class="alert-notifiche">
-                        <h2>Giulia</h2>
-                        <h4>Dirò tutto a Francesca...</h4>
+                        <h2>{{friend.name}}</h2>
+                        <h4>{{friend.text}}</h4>
                     </div>
                 </div>
 
