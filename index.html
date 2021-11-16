@@ -42,7 +42,7 @@
 
                 <div v-for="friend, i in friends" class="user-chat">
                     <div class="picprofile">
-                        <img src="friend.image" alt=""> 
+                        <img :src="friend.image" alt=""> 
                     </div>
                     <div class="alert-notifiche">
                         <h2>{{friend.name}}</h2>
@@ -70,15 +70,18 @@
                     </div>
                 </div>
 
-                <div id="messages">
+                <div id="messages" v-for="friend, i in friends">
                     <div class="containOwnMessages">
                         <div class="ownMessage">
-                            <p><strong>Hai portato a spasso il cane?</strong></p>
+                            <p><strong>{{friend.messages.ownChat}}</strong></p>
+                            <p class="date">{{friend.messages.ownDate}}</p>
                         </div>
                     </div>
                     <div class="containFriendMessages">
                         <div class="FriendMessage">
-                            <p><strong>Tutto fatto!</strong></p>
+                            <p><strong>{{}}</strong></p>
+                            <p class="date">{{}}</p>
+
                         </div>
                     </div>
                 </div>

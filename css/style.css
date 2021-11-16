@@ -162,12 +162,19 @@
     margin-bottom: 20px;
 }
 .ownMessage{
+    position: relative;
     margin-right: 40px;
     background-color:rgba(213,249,186,255);
     padding: 20px;
+    padding-right: 100px;
     border-radius: 10px;
 }
-
+.date{
+    color: gray;
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+}
 .containFriendMessages{
     display: flex;
     width: 100%;
@@ -175,8 +182,10 @@
     margin-bottom: 20px;
 }
 .FriendMessage{
+    position: relative;
     margin-left: 40px;
     background-color:white;
     padding: 20px;
+    padding-right: 100px;
     border-radius: 10px;
 }
