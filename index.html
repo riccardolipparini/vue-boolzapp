@@ -87,7 +87,7 @@
 
                 <div id="write">
                     <i class="far fa-smile"></i>
-                    <input type="text" placeholder="Scrivi un messaggio...">
+                    <input type="text" @keydown.enter="newMessage($event)" placeholder="Scrivi un messaggio...">
                     <i class="fas fa-microphone"></i>
                 </div>
             </div>

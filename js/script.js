@@ -7,6 +7,7 @@ var chat = new Vue({
                 name: 'Michele',
                 avatar: '_1',
                 visible: true,
+                nuovoMessaggio: "",
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -29,6 +30,7 @@ var chat = new Vue({
                 name: 'Fabio',
                 avatar: '_2',
                 visible: true,
+                nuovoMessaggio: "",
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
@@ -51,6 +53,7 @@ var chat = new Vue({
                 name: 'Samuele',
                 avatar: '_3',
                 visible: true,
+                nuovoMessaggio: "",
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
@@ -73,6 +76,7 @@ var chat = new Vue({
                 name: 'Luisa',
                 avatar: '_4',
                 visible: true,
+                nuovoMessaggio: "",
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -97,8 +101,16 @@ var chat = new Vue({
         
         openChat(index){
             this.activeChat = index;
-        }    
-            
+        },
+        
+        
+        newMessage(newMex){
+            let messaggio = {
+            date: '10/01/2020 15:30:55',
+            text: newMex.target.value,
+            status: 'sent'};
+            this.messages.push(messaggio);
+        } 
         
     }
 
