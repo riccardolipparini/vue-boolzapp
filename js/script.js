@@ -109,7 +109,16 @@ var chat = new Vue({
             date: '10/01/2020 15:30:55',
             text: newMex.target.value,
             status: 'sent'};
-            this.messages.push(messaggio);
+            this.contacts[this.activeChat].messages.push(messaggio);
+            setTimeout(() => {
+              let messaggio =  {   
+                    date:   '28/03/2020   10:10:40',   
+                    text:   'ok',   
+                    status:   'received'   
+                };
+                this.contacts[this.activeChat].messages.push(messaggio);
+                ;
+            }, 1000);
         } 
         
     }
