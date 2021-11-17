@@ -40,13 +40,13 @@
                     <input id="input-search" type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
 
-                <div v-for="friend, i in friends" class="user-chat">
+                <div v-for="friend, i in contacts" class="user-chat" :class="i === activeChat ? `active` : `` " @click="openChat(i)">
                     <div class="picprofile">
-                        <img :src="friend.image" alt=""> 
+                        <img :src="`img/avatar${friend.avatar}.jpg`" alt=""> 
                     </div>
                     <div class="alert-notifiche">
                         <h2>{{friend.name}}</h2>
-                        <h4>{{friend.text}}</h4>
+                        <h4>{{ getLastMessage(i) }}</h4>
                     </div>
                 </div>
 
@@ -59,8 +59,8 @@
                             <img src="img/avatar_1.jpg" alt=""> 
                         </div>
                         <div class="alert-notifiche">
-                            <h2>Michele</h2>
-                            <h4>Ultimo accesso oggi alle 10/01/2021 15:57</h4>
+                            <h2>{{contacts[activeChat].name}}</h2>
+                            <h4>da stampare data</h4>
                         </div>
                     </div>
                     <div class="icons">
@@ -70,18 +70,17 @@
                     </div>
                 </div>
 
-                <div id="messages" v-for="friend, i in friends">
-                    <div class="containOwnMessages">
+                <div id="messages" v-for="message, i in contacts[activeChat].messages">
+                    <div class="containOwnMessages" v-if="message.status === 'sent'">
                         <div class="ownMessage">
-                            <p><strong>{{friend.messages.ownChat}}</strong></p>
-                            <p class="date">{{friend.messages.ownDate}}</p>
+                            <p><strong>{{message.text}}</strong></p>
+                            <p class="date">{{message.date}}</p>
                         </div>
                     </div>
-                    <div class="containFriendMessages">
+                    <div class="containFriendMessages" v-else>
                         <div class="FriendMessage">
-                            <p><strong>{{}}</strong></p>
-                            <p class="date">{{}}</p>
-
+                            <p><strong>{{message.text}}</strong></p>
+                            <p class="date">{{message.date}}</p>
                         </div>
                     </div>
                 </div>

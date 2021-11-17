@@ -189,3 +189,7 @@
     padding-right: 100px;
     border-radius: 10px;
 }
+
+.active{
+    background-color: grey;
+}
