@@ -37,10 +37,10 @@
                 </div>
 
                 <div id="search">
-                    <input id="input-search" type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input id="input-search" type="text" placeholder="Cerca o inizia una nuova chat" v-model="search">
                 </div>
 
-                <div v-for="friend, i in contacts" class="user-chat" :class="i === activeChat ? `active` : `` " @click="openChat(i)">
+                <div v-for="friend, i in filteredChats" class="user-chat" :class="i === activeChat ? `active` : `` " @click="openChat(i)">
                     <div class="picprofile">
                         <img :src="`img/avatar${friend.avatar}.jpg`" alt=""> 
                     </div>
